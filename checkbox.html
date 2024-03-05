@@ -7,16 +7,31 @@
 
     <style>
         input[type=checkbox] {
-            display: inline-block;
-            width: 5px;
-            right: 25px;
+            display: none;
         }
+       
+        label span{
+            display:inline-block;
+            width: 25px;
+            height: 25px;
+            background-color: red;
+        }
+
+        input[type=checkbox]:checked + label span{
+            background-color: blue;
+        }
+
+        input[type=checkbox]:checked + label span{
+            border-left: 2px solid black;
+            border-bottom: 2px solid black;
+        }
+
     </style>
 </head>
 <body>
     <h1>Checkbox</h1>
 
-    <input type="Checkbox" id="html">
+    <input type="Checkbox" id="html" checked>
     <label for="html">
         <span></span>
         HTML
